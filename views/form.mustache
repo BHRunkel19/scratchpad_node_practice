@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Book Form</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <h1>Add New Book</h1>
+
+    <ul class="errors">
+      {{#errorList}}
+      <li>{{msg}}</li>
+      {{/errorList}}
+    </ul>
+
+    <form id="newBook" action="/newBook" method="post">
+    <div id="input1">
+      <input type="text" name="title" placeholder="Book Title" value="{{bookFields.title}}"/>
+    </div>
+
+    <div id="input2">
+      <input type="text" name="author" placeholder="Author" value="{{bookFields.author}}"/>
+    </div>
+
+    <button type="submit" name="button">Add New Book</button>
+    </form>
+
+  </body>
+</html>
